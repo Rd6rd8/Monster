@@ -1,0 +1,144 @@
+[INFO   ] Logger: Record log in /storage/emulated/0/Monster _ New Card/Code/.kivy/logs/kivy_23-12-30_8.txt
+[INFO   ] Kivy: v2.2.1
+[INFO   ] Kivy: Installed at "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.11/site-packages/kivy/__init__.py"
+[INFO   ] Python: v3.11.4 (main, Sep 30 2023, 10:54:38) [GCC 11.4.0]
+[INFO   ] Python: Interpreter at "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/bin/python3"
+[INFO   ] Logger: Purge log fired. Processing...
+[INFO   ] Logger: Purge finished!
+[INFO   ] Factory: 190 symbols loaded
+[INFO   ] Image: Providers: img_tex, img_dds, img_sdl2, img_pil (img_ffpyplayer ignored)
+[INFO   ] KivyMD: 1.1.1, git-Unknown, 2023-12-27 (installed at "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.11/site-packages/kivymd/__init__.py")
+[INFO   ] Text: Provider: sdl2
+[INFO   ] Window: Provider: sdl2
+[INFO   ] GL: Using the "OpenGL ES 2" graphics system
+[INFO   ] GL: Backend used <sdl2>
+[INFO   ] GL: OpenGL version <b'OpenGL ES 3.2 v1.r19p0-01rel0.###other-sha0123456789ABCDEF0###'>
+[INFO   ] GL: OpenGL vendor <b'ARM'>
+[INFO   ] GL: OpenGL renderer <b'Mali-G71'>
+[INFO   ] GL: OpenGL parsed version: 3, 2
+[INFO   ] GL: Texture max size <8192>
+[INFO   ] GL: Texture max units <16>
+[INFO   ] Window: auto add sdl2 input provider
+[INFO   ] Window: virtual keyboard not allowed, single mode, not docked
+[DEBUG  ] Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+[DEBUG  ] Making request: POST https://oauth2.googleapis.com/token
+[DEBUG  ] Starting new HTTPS connection (1): oauth2.googleapis.com:443
+[DEBUG  ] Incremented Retry for (url='/token'): Retry(total=2, connect=None, read=None, redirect=None, status=None)
+[WARNING] Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7dbbfaf610>: Failed to resolve 'oauth2.googleapis.com' ([Errno 7] No address associated with hostname)")': /token
+[DEBUG  ] Starting new HTTPS connection (2): oauth2.googleapis.com:443
+[DEBUG  ] Incremented Retry for (url='/token'): Retry(total=1, connect=None, read=None, redirect=None, status=None)
+[WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7dbbfb8190>: Failed to resolve 'oauth2.googleapis.com' ([Errno 7] No address associated with hostname)")': /token
+[DEBUG  ] Starting new HTTPS connection (3): oauth2.googleapis.com:443
+[DEBUG  ] Incremented Retry for (url='/token'): Retry(total=0, connect=None, read=None, redirect=None, status=None)
+[WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7dbbfb8bd0>: Failed to resolve 'oauth2.googleapis.com' ([Errno 7] No address associated with hostname)")': /token
+[DEBUG  ] Starting new HTTPS connection (4): oauth2.googleapis.com:443
+[WARNING] stderr: Traceback (most recent call last):
+[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.11/site-packages/urllib3/connection.py", line 203, in _new_conn
+[WARNING] stderr:     sock = connection.create_connection(
+[WARNING] stderr:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.11/site-packages/urllib3/util/connection.py", line 60, in create_connection
+[WARNING] stderr:     for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+[WARNING] stderr:                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.11/socket.py", line 962, in getaddrinfo
+[WARNING] stderr:     for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+[WARNING] stderr:                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[WARNING] stderr: socket.gaierror: [Errno 7] No address associated with hostname
+[WARNING] stderr: 
+[WARNING] stderr: The above exception was the direct cause of the following exception:
+[WARNING] stderr: 
+[WARNING] stderr: Traceback (most recent call last):
+[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.11/site-packages/urllib3/connectionpool.py", line 790, in urlopen
+[WARNING] stderr:     response = self._make_request(
+[WARNING] stderr:                ^^^^^^^^^^^^^^^^^^^
+[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.11/site-packages/urllib3/connectionpool.py", line 491, in _make_request
+[WARNING] stderr:     raise new_e
+[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.11/site-packages/urllib3/connectionpool.py", line 467, in _make_request
+[WARNING] stderr:     self._validate_conn(conn)
+[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.11/site-packages/urllib3/connectionpool.py", line 1096, in _validate_conn
+[WARNING] stderr:     conn.connect()
+[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.11/site-packages/urllib3/connection.py", line 611, in connect
+[WARNING] stderr:     self.sock = sock = self._new_conn()
+[WARNING] stderr:                        ^^^^^^^^^^^^^^^^
+[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.11/site-packages/urllib3/connection.py", line 210, in _new_conn
+[WARNING] stderr:     raise NameResolutionError(self.host, self, e) from e
+[WARNING] stderr: urllib3.exceptions.NameResolutionError: <urllib3.connection.HTTPSConnection object at 0x7dbbfb9610>: Failed to resolve 'oauth2.googleapis.com' ([Errno 7] No address associated with hostname)
+[WARNING] stderr: 
+[WARNING] stderr: The above exception was the direct cause of the following exception:
+[WARNING] stderr: 
+[WARNING] stderr: Traceback (most recent call last):
+[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.11/site-packages/requests/adapters.py", line 486, in send
+[WARNING] stderr:     resp = conn.urlopen(
+[WARNING] stderr:            ^^^^^^^^^^^^^
+[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.11/site-packages/urllib3/connectionpool.py", line 874, in urlopen
+[WARNING] stderr:     return self.urlopen(
+[WARNING] stderr:            ^^^^^^^^^^^^^
+[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.11/site-packages/urllib3/connectionpool.py", line 874, in urlopen
+[WARNING] stderr:     return self.urlopen(
+[WARNING] stderr:            ^^^^^^^^^^^^^
+[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.11/site-packages/urllib3/connectionpool.py", line 874, in urlopen
+[WARNING] stderr:     return self.urlopen(
+[WARNING] stderr:            ^^^^^^^^^^^^^
+[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.11/site-packages/urllib3/connectionpool.py", line 844, in urlopen
+[WARNING] stderr:     retries = retries.increment(
+[WARNING] stderr:               ^^^^^^^^^^^^^^^^^^
+[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.11/site-packages/urllib3/util/retry.py", line 515, in increment
+[WARNING] stderr:     raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+[WARNING] stderr:     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[WARNING] stderr: urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='oauth2.googleapis.com', port=443): Max retries exceeded with url: /token (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7dbbfb9610>: Failed to resolve 'oauth2.googleapis.com' ([Errno 7] No address associated with hostname)"))
+[WARNING] stderr: 
+[WARNING] stderr: During handling of the above exception, another exception occurred:
+[WARNING] stderr: 
+[WARNING] stderr: Traceback (most recent call last):
+[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.11/site-packages/google/auth/transport/requests.py", line 186, in __call__
+[WARNING] stderr:     response = self.session.request(
+[WARNING] stderr:                ^^^^^^^^^^^^^^^^^^^^^
+[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.11/site-packages/requests/sessions.py", line 589, in request
+[WARNING] stderr:     resp = self.send(prep, **send_kwargs)
+[WARNING] stderr:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.11/site-packages/requests/sessions.py", line 703, in send
+[WARNING] stderr:     r = adapter.send(request, **kwargs)
+[WARNING] stderr:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.11/site-packages/requests/adapters.py", line 519, in send
+[WARNING] stderr:     raise ConnectionError(e, request=request)
+[WARNING] stderr: requests.exceptions.ConnectionError: HTTPSConnectionPool(host='oauth2.googleapis.com', port=443): Max retries exceeded with url: /token (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7dbbfb9610>: Failed to resolve 'oauth2.googleapis.com' ([Errno 7] No address associated with hostname)"))
+[WARNING] stderr: 
+[WARNING] stderr: The above exception was the direct cause of the following exception:
+[WARNING] stderr: 
+[WARNING] stderr: Traceback (most recent call last):
+[WARNING] stderr:   File "/storage/emulated/0/Monster _ New Card/Code/main.py", line 32, in <module>
+[WARNING] stderr:     token_value = hg.child(token_key).get()
+[WARNING] stderr:                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+[WARNING] stderr:   File "/storage/emulated/0/Monster _ New Card/Code/firebase_admin/db.py", line 221, in get
+[WARNING] stderr:     return self._client.body('get', self._add_suffix(), params=params)
+[WARNING] stderr:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[WARNING] stderr:   File "/storage/emulated/0/Monster _ New Card/Code/firebase_admin/_http_client.py", line 131, in body
+[WARNING] stderr:     resp = self.request(method, url, **kwargs)
+[WARNING] stderr:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[WARNING] stderr:   File "/storage/emulated/0/Monster _ New Card/Code/firebase_admin/db.py", line 929, in request
+[WARNING] stderr:     return super(_Client, self).request(method, url, **kwargs)
+[WARNING] stderr:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[WARNING] stderr:   File "/storage/emulated/0/Monster _ New Card/Code/firebase_admin/_http_client.py", line 118, in request
+[WARNING] stderr:     resp = self._session.request(method, self.base_url + url, **kwargs)
+[WARNING] stderr:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.11/site-packages/google/auth/transport/requests.py", line 537, in request
+[WARNING] stderr:     self.credentials.before_request(auth_request, method, url, request_headers)
+[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.11/site-packages/google/auth/credentials.py", line 175, in before_request
+[WARNING] stderr:     self.refresh(request)
+[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.11/site-packages/google/oauth2/service_account.py", line 449, in refresh
+[WARNING] stderr:     access_token, expiry, _ = _client.jwt_grant(
+[WARNING] stderr:                               ^^^^^^^^^^^^^^^^^^
+[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.11/site-packages/google/oauth2/_client.py", line 308, in jwt_grant
+[WARNING] stderr:     response_data = _token_endpoint_request(
+[WARNING] stderr:                     ^^^^^^^^^^^^^^^^^^^^^^^^
+[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.11/site-packages/google/oauth2/_client.py", line 268, in _token_endpoint_request
+[WARNING] stderr:     response_status_ok, response_data, retryable_error = _token_endpoint_request_no_throw(
+[WARNING] stderr:                                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.11/site-packages/google/oauth2/_client.py", line 215, in _token_endpoint_request_no_throw
+[WARNING] stderr:     request_succeeded, response_data, retryable_error = _perform_request()
+[WARNING] stderr:                                                         ^^^^^^^^^^^^^^^^^^
+[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.11/site-packages/google/oauth2/_client.py", line 191, in _perform_request
+[WARNING] stderr:     response = request(
+[WARNING] stderr:                ^^^^^^^^
+[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.11/site-packages/google/auth/transport/requests.py", line 192, in __call__
+[WARNING] stderr:     raise new_exc from caught_exc
+[WARNING] stderr: google.auth.exceptions.TransportError: HTTPSConnectionPool(host='oauth2.googleapis.com', port=443): Max retries exceeded with url: /token (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7dbbfb9610>: Failed to resolve 'oauth2.googleapis.com' ([Errno 7] No address associated with hostname)"))

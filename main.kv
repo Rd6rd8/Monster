@@ -1,0 +1,1322 @@
+<ElementCard@MDCard>:
+    image: ''
+    name: ''
+    t : 'detail'
+    sip_x: 130
+    price  : '  Buy  '
+    font : '20dp'
+    sip_y: 90
+    size_hint_x: None
+    width: "150dp"
+    elevation: 0
+    on_release: app.transition_to_detail(root.t,root.image, root.name)
+    size_hint_y: None
+    md_bg_color: 1, 1, 1, .5
+    height: "200dp"
+    padding: "15dp"
+    spacing: "15dp"
+    radius: [25]
+
+    BoxLayout:
+        orientation : 'vertical'
+        size_hint_y: None
+        height: "160dp"
+        spacing : '17dp'
+        AsyncImage:
+            source: root.image
+            size_hint_x: None
+            size_hint_y: None
+            width: dp(root.sip_x)
+            height: dp(root.sip_y)
+
+        MDLabel:
+            text: root.name
+            halign: 'center'
+            font_size: root.font
+    
+        MDRoundFlatIconButton:
+            text:root.price
+            icon : 'shopping'
+            icon_size : '20dp'
+            font_size : '20sp'
+            on_release: app.buyd(root.name)
+            theme_text_color: "Secondary" 
+<BagCard>:
+    image: ''
+    name: ''
+    t : 'odetail'
+    sip_x: 130
+    price  : '  Buy  '
+    font : '20dp'
+    sip_y: 90
+    size_hint_x: None
+    width: "150dp"
+    elevation: 0
+    on_release: app.transition_to_detail(root.t,root.image, root.name)
+    size_hint_y: None
+    md_bg_color: 1, 1, 1, .5
+    height: "200dp"
+    padding: "15dp"
+    spacing: "15dp"
+    radius: [25]
+
+    BoxLayout:
+        orientation : 'vertical'
+        size_hint_y: None
+        height: "160dp"
+        spacing : '17dp'
+        AsyncImage:
+            source: root.image
+            size_hint_x: None
+            size_hint_y: None
+            width: dp(root.sip_x)
+            height: dp(root.sip_y)
+
+        MDLabel:
+            text: root.name
+            bold :True
+            halign: 'center'
+            font_size: root.font
+
+<Home>:
+    name: 'home'
+    Screen:
+        AsyncImage:
+            source: "/storage/emulated/0/Monster _ New Card/Assests/bg.png"
+            allow_stretch: True
+            opacity : .5
+    BoxLayout:
+        orientation: "vertical"
+        padding : 0,0,0,'700dp'
+        MDTopAppBar:
+            BoxLayout:
+                orientation: "horizontal"
+                padding: [0, '30dp', 0, 0]
+                IconLeftWidget:
+                    icon: "calendar-check-outline"
+                    theme_text_color: "Custom"
+                    text_color: 1, 1, 1,1
+            BoxLayout:
+                orientation: "horizontal"
+                padding: ['100dp',0 , 0, "5dp"]
+                IconRightWidget:
+                    icon: "/storage/emulated/0/Monster _ New Card/Assests/Scoin.png"
+                    text_color: 1, 1, 1, 20
+                    font_size : '20dp'
+                MDLabel:
+                    id : coin_label
+                    bold : True
+                    text :'00'
+                    color:1,1,1,1
+                IconRightWidget:
+                    icon: "/storage/emulated/0/Monster _ New Card/Assests/Rdiamond.png"
+                    text_color: 1, 1, 1, 20
+                    font_size : '20dp'
+                MDLabel:
+                    id : diamond_label
+                    bold : True
+                    text: '00'
+                    color : 1,1,1,1
+    MDBottomAppBar:
+        MDTopAppBar:
+            icon : 'sword-cross'
+            type:'bottom'
+            elevation : 0
+
+            BoxLayout:
+                orientation: "horizontal"
+                spacing: "40dp"  
+                padding: [0, '30dp', 0, "30dp"]
+                IconLeftWidget:
+                    icon: "account"
+                    theme_text_color: "Custom"
+                    text_color: 1, 1, 1, 20
+                    on_press:app.change('profile')               
+                IconLeftWidget:
+                    icon: "store"
+                    theme_text_color: "Custom"
+                    text_color: 1, 1, 1, 20
+                    on_press:app.change('store') 
+            BoxLayout:
+                orientation :"horizontal"
+                spacing: "40dp"  
+                padding: ['250dp', 0, 0, "35dp"]
+                IconLeftWidget:
+                    icon: "bag-personal-outline"
+                    theme_text_color: "Custom"
+                    text_color: 1, 1, 1, 20
+                    on_press:app.change('bag') 
+                IconLeftWidget:
+                    icon: "cards"
+                    theme_text_color: "Custom"
+                    text_color: 1, 1, 1, 20
+                    on_press:app.change('card') 
+    MDRectangleFlatButton:
+        id : rank
+        text: "[color=#FFFF00][font=/storage/emulated/0/Monster _ New Card/VT323/VT323-Regular.ttf] 10000 "
+        markup: True
+        font_size : dp(40)
+        size_hint: None, None
+        size: dp(120), dp(40)
+        pos_hint: {'center_x': 0.5,'center_y': 0.9}
+        md_bg_color: 0, 0, 0, 1 
+    AsyncImage:
+        id : Avatar
+        size_hint: (None, None)
+        size: (dp(120), dp(120))
+        pos_hint: {'center_x': 0.2,'center_y': 0.25}
+    AsyncImage:
+        source:'/storage/emulated/0/Monster _ New Card/Assests/vs.png'
+        size_hint: None, None
+        size: dp(120), dp(120)
+        pos_hint: {'center_x': 0.5,'center_y': 0.25}
+        
+    AsyncImage:
+        source:'/storage/emulated/0/Monster _ New Card/Assests/random.png'
+        size_hint: None, None
+        size: dp(160), dp(160)
+        pos_hint: {'center_x': 0.8,'center_y': 0.25}
+    AsyncImage:
+        source:'/storage/emulated/0/Monster _ New Card/Assests/add.png'
+        size_hint: None, None
+        size: dp(100), dp(100)
+        pos_hint: {'center_x': 0.2,'center_y': 0.5}
+    AsyncImage:
+        source:'/storage/emulated/0/Monster _ New Card/Assests/add.png'
+        size_hint: None, None
+        size: dp(100), dp(100)
+        pos_hint: {'center_x': 0.5,'center_y': 0.5}
+    AsyncImage:
+        source:'/storage/emulated/0/Monster _ New Card/Assests/add.png'
+        size_hint: None, None
+        size: dp(100), dp(100)
+        pos_hint: {'center_x': 0.8,'center_y': 0.5}
+    AsyncImage:
+        source:'/storage/emulated/0/Monster _ New Card/Assests/add.png'
+        size_hint: None, None
+        size: dp(100), dp(100)
+        pos_hint: {'center_x': 0.2,'center_y': 0.7}
+    AsyncImage:
+        source:'/storage/emulated/0/Monster _ New Card/Assests/add.png'
+        size_hint: None, None
+        size: dp(100), dp(100)
+        pos_hint: {'center_x': 0.5,'center_y': 0.7}
+    AsyncImage:
+        source:'/storage/emulated/0/Monster _ New Card/Assests/add.png'
+        size_hint: None, None
+        size: dp(100), dp(100)
+        pos_hint: {'center_x': 0.8,'center_y': 0.7}
+        
+<Profile>:
+    name : 'profile'
+    Screen:
+        AsyncImage:
+            source: "/storage/emulated/0/Monster _ New Card/Assests/bg.png"
+            allow_stretch: True
+            opacity : .5
+    BoxLayout:
+        orientation: "vertical"
+        padding : 0,0,0,'700dp'
+        MDTopAppBar:
+            BoxLayout:
+                orientation: "horizontal"
+                padding: [0, '30dp', 0, 0]
+                IconLeftWidget:
+                    icon: "calendar-check-outline"
+                    theme_text_color: "Custom"
+                    text_color: 1, 1, 1,1
+            BoxLayout:
+                orientation: "horizontal"
+                padding: ['100dp',0 , 0, "5dp"]
+                IconRightWidget:
+                    icon: "/storage/emulated/0/Monster _ New Card/Assests/Scoin.png"
+                    text_color: 1, 1, 1, 20
+                    font_size : '20dp'
+                MDLabel:
+                    id : coin_label
+                    bold : True
+                    text: '00'
+                    color:1,1,1,1
+                IconRightWidget:
+                    icon: "/storage/emulated/0/Monster _ New Card/Assests/Rdiamond.png"
+                    text_color: 1, 1, 1, 20
+                    font_size : '20dp'
+                MDLabel:
+                    id : diamond_label
+                    bold : True
+                    text: '00'
+                    color : 1,1,1,1
+    MDBottomAppBar:
+        MDTopAppBar:
+            icon : 'home'
+            type:'bottom'
+            elevation : 0
+            on_action_button :app.change('home') 
+            BoxLayout:
+                orientation: "horizontal"
+                spacing: "40dp"  
+                padding: [0, '30dp', 0, "30dp"]
+                IconLeftWidget:
+                    icon: "account"
+                    theme_text_color: "Custom"
+                    text_color: 1, 1, 1, 20
+                    on_press:app.change('profile')               
+                IconLeftWidget:
+                    icon: "store"
+                    theme_text_color: "Custom"
+                    text_color: 1, 1, 1, 20
+                    on_press:app.change('store') 
+            BoxLayout:
+                orientation :"horizontal"
+                spacing: "40dp"  
+                padding: ['250dp', 0, 0, "35dp"]
+                IconLeftWidget:
+                    icon: "bag-personal-outline"
+                    theme_text_color: "Custom"
+                    text_color: 1, 1, 1, 20
+                    on_press:app.change('bag') 
+                IconLeftWidget:
+                    icon: "cards"
+                    theme_text_color: "Custom"
+                    text_color: 1, 1, 1, 20
+                    on_press:app.change('card')
+    AsyncImage:
+        id : Avatar
+        size_hint: None, None
+        size: dp(180), dp(180)
+        pos_hint: {'center_x': 0.5,'center_y': 0.7}
+    MDLabel:
+        id : Lvl
+        bold : True
+        color:0,0,0,1
+        pos_hint: {'center_x': .97,'center_y': 0.55}
+    MDLabel:
+        id : game
+        bold : True
+        color:0,0,0,1
+        pos_hint: {'center_x': .7,'center_y': 0.35}
+    MDRectangleFlatButton:
+        id : rank
+        text: "[color=#FFFF00][font=/storage/emulated/0/Monster _ New Card/VT323/VT323-Regular.ttf] 10000 "
+        markup: True
+        font_size : dp(40)
+        size_hint: None, None
+        size: dp(120), dp(40)
+        pos_hint: {'center_x': 0.5,'center_y': 0.9}
+        md_bg_color: 0, 0, 0, 1 
+<Card>:
+    name : 'card'
+    Screen:
+        AsyncImage:
+            source: "/storage/emulated/0/Monster _ New Card/Assests/bg.png"
+            allow_stretch: True
+            opacity : .5
+    BoxLayout:
+        orientation: "vertical"
+        padding : 0,0,0,'700dp'
+        MDTopAppBar:
+            BoxLayout:
+                orientation: "horizontal"
+                padding: [0, '30dp', 0, 0]
+                IconLeftWidget:
+                    icon: "calendar-check-outline"
+                    theme_text_color: "Custom"
+                    text_color: 1, 1, 1,1
+            BoxLayout:
+                orientation: "horizontal"
+                padding: ['100dp',0 , 0, "5dp"]
+                IconRightWidget:
+                    icon: "/storage/emulated/0/Monster _ New Card/Assests/Scoin.png"
+                    text_color: 1, 1, 1, 20
+                    font_size : '20dp'
+                MDLabel:
+                    id : coin_label
+                    bold : True
+                    text: '00'
+                    color:1,1,1,1
+                IconRightWidget:
+                    icon: "/storage/emulated/0/Monster _ New Card/Assests/Rdiamond.png"
+                    text_color: 1, 1, 1, 20
+                    font_size : '20dp'
+                MDLabel:
+                    id : diamond_label
+                    bold : True
+                    text: '00'
+                    color : 1,1,1,1
+    MDBottomAppBar:
+        MDTopAppBar:
+            icon : 'home'
+            type:'bottom'
+            elevation : 0
+            on_action_button :app.change('home') 
+
+            BoxLayout:
+                orientation: "horizontal"
+                spacing: "40dp"  
+                padding: [0, '30dp', 0, "30dp"]
+                IconLeftWidget:
+                    icon: "account"
+                    theme_text_color: "Custom"
+                    text_color: 1, 1, 1, 20
+                    on_press:app.change('profile')               
+                IconLeftWidget:
+                    icon: "store"
+                    theme_text_color: "Custom"
+                    text_color: 1, 1, 1, 20
+                    on_press:app.change('store') 
+            BoxLayout:
+                orientation :"horizontal"
+                spacing: "40dp"  
+                padding: ['250dp', 0, 0, "35dp"]
+                IconLeftWidget:
+                    icon: "bag-personal-outline"
+                    theme_text_color: "Custom"
+                    text_color: 1, 1, 1, 20
+                    on_press:app.change('bag') 
+                IconLeftWidget:
+                    icon: "cards"
+                    theme_text_color: "Custom"
+                    text_color: 1, 1, 1, 20
+                    on_press:app.change('card')
+    MDLabel:
+        text : 'MonsCard'
+        bold : True
+        font_size : '40dp'
+        color : 33/255,150/255,243/255,1
+        pos_hint : {'center_x': 0.8, 'center_y': 0.9}
+    MDIconButton:
+        icon: "/storage/emulated/0/Monster _ New Card/Assests/pokeball.png"
+        pos_hint : {'center_x': 0.25, 'center_y': 0.9}
+        icon_size : '65sp'               
+    ScrollView:
+        size_hint: 1, 0.74
+        pos_hint : {'center_x': 0.61, 'center_y': 0.5}
+        id: rv
+        GridLayout:
+            cols: 2  
+            spacing: dp(20)
+            size_hint_y: None
+            height: self.minimum_height
+            id: ne
+<Bag>:
+    name : 'bag'
+    Screen:
+        AsyncImage:
+            source: "/storage/emulated/0/Monster _ New Card/Assests/bg.png"
+            allow_stretch: True
+            opacity : .5
+    BoxLayout:
+        orientation: "vertical"
+        padding : 0,0,0,'700dp'
+        MDTopAppBar:
+            BoxLayout:
+                orientation: "horizontal"
+                padding: [0, '30dp', 0, 0]
+                IconLeftWidget:
+                    icon: "calendar-check-outline"
+                    theme_text_color: "Custom"
+                    text_color: 1, 1, 1,1
+            BoxLayout:
+                orientation: "horizontal"
+                padding: ['100dp',0 , 0, "5dp"]
+                IconRightWidget:
+                    icon: "/storage/emulated/0/Monster _ New Card/Assests/Scoin.png"
+                    text_color: 1, 1, 1, 20
+                    font_size : '20dp'
+                MDLabel:
+                    id : coin_label
+                    bold : True
+                    text: '00'
+                    color:1,1,1,1
+                IconRightWidget:
+                    icon: "/storage/emulated/0/Monster _ New Card/Assests/Rdiamond.png"
+                    text_color: 1, 1, 1, 20
+                    font_size : '20dp'
+                MDLabel:
+                    id : diamond_label
+                    bold : True
+                    text: '00'
+                    color : 1,1,1,1
+    MDBottomAppBar:
+        MDTopAppBar:
+            icon : 'home'
+            type:'bottom'
+            elevation : 0
+            on_action_button :app.change('home') 
+
+            BoxLayout:
+                orientation: "horizontal"
+                spacing: "40dp"  
+                padding: [0, '30dp', 0, "30dp"]
+                IconLeftWidget:
+                    icon: "account"
+                    theme_text_color: "Custom"
+                    text_color: 1, 1, 1, 20
+                    on_press:app.change('profile')               
+                IconLeftWidget:
+                    icon: "store"
+                    theme_text_color: "Custom"
+                    text_color: 1, 1, 1, 20
+                    on_press:app.change('store') 
+            BoxLayout:
+                orientation :"horizontal"
+                spacing: "40dp"  
+                padding: ['250dp', 0, 0, "35dp"]
+                IconLeftWidget:
+                    icon: "bag-personal-outline"
+                    theme_text_color: "Custom"
+                    text_color: 1, 1, 1, 20
+                    on_press:app.change('bag') 
+                IconLeftWidget:
+                    icon: "cards"
+                    theme_text_color: "Custom"
+                    text_color: 1, 1, 1, 20
+                    on_press:app.change('card')
+    MDLabel:
+        text : 'MonsItem'
+        bold : True
+        font_size : '40dp'
+        color : 33/255,150/255,243/255,1
+        pos_hint : {'center_x': 0.8, 'center_y': 0.9}
+    MDIconButton:
+        icon: "/storage/emulated/0/Monster _ New Card/Assests/pokeball.png"
+        pos_hint : {'center_x': 0.25, 'center_y': 0.9}
+        icon_size : '65sp'               
+    ScrollView:
+        size_hint: 1, 0.74
+        pos_hint : {'center_x': 0.61, 'center_y': 0.5}
+        id: rv
+        GridLayout:
+            cols: 2  
+            spacing: dp(20)
+            size_hint_y: None
+            height: self.minimum_height
+            id: ne
+<Store>:
+    name : 'store'
+    Screen:
+        AsyncImage:
+            source: "/storage/emulated/0/Monster _ New Card/Assests/bg.png"
+            allow_stretch: True
+            opacity : .5
+        BoxLayout:
+            orientation: "vertical"
+            padding : 0,0,0,'700dp'
+            MDTopAppBar:
+                BoxLayout:
+                    orientation: "horizontal"
+                    padding: [0, '30dp', 0, 0]
+                    IconLeftWidget:
+                        icon: "calendar-check-outline"
+                        theme_text_color: "Custom"
+                        text_color: 1, 1, 1,1
+                BoxLayout:
+                    orientation: "horizontal"
+                    padding: ['100dp',0 , 0, "5dp"]
+                    IconRightWidget:
+                        icon: "/storage/emulated/0/Monster _ New Card/Assests/Scoin.png"
+                        text_color: 1, 1, 1, 20
+                        font_size : '20dp'
+                    MDLabel:
+                        id : coin_label
+                        bold : True
+                        text: '00'
+                        color:1,1,1,1
+                    IconRightWidget:
+                        icon: "/storage/emulated/0/Monster _ New Card/Assests/Rdiamond.png"
+                        text_color: 1, 1, 1, 20
+                        font_size : '20dp'
+                    MDLabel:
+                        id : diamond_label
+                        bold : True
+                        text: '00'
+                        color : 1,1,1,1
+        MDBottomAppBar:
+            MDTopAppBar:
+                icon : 'home'
+                type:'bottom'
+                elevation : 0
+                on_action_button :app.change('home') 
+    
+                BoxLayout:
+                    orientation: "horizontal"
+                    spacing: "40dp"  
+                    padding: [0, '30dp', 0, "30dp"]
+                    IconLeftWidget:
+                        icon: "account"
+                        theme_text_color: "Custom"
+                        text_color: 1, 1, 1, 20
+                        on_press:app.change('profile')               
+                    IconLeftWidget:
+                        icon: "store"
+                        theme_text_color: "Custom"
+                        text_color: 1, 1, 1, 20
+                        on_press:app.change('store') 
+                BoxLayout:
+                    orientation :"horizontal"
+                    spacing: "40dp"  
+                    padding: ['250dp', 0, 0, "35dp"]
+                    IconLeftWidget:
+                        icon: "bag-personal-outline"
+                        theme_text_color: "Custom"
+                        text_color: 1, 1, 1, 20
+                        on_press:app.change('bag') 
+                    IconLeftWidget:
+                        icon: "cards"
+                        theme_text_color: "Custom"
+                        text_color: 1, 1, 1, 20
+                        on_press:app.change('card')
+    MDLabel:
+        text : 'Monstore'
+        bold : True
+        font_size : '40dp'
+        color : 33/255,150/255,243/255,1
+        pos_hint : {'center_x': 0.8, 'center_y': 0.9}
+    MDIconButton:
+        icon: "/storage/emulated/0/Monster _ New Card/Assests/pokeball.png"
+        pos_hint : {'center_x': 0.25, 'center_y': 0.9}
+        icon_size : '65sp'
+            
+    MDBoxLayout:
+        pos_hint : {'center_x': 0.56, 'center_y': 0.62}
+        
+        ScrollView:
+            size_hint: 1, 0.75
+            id: rv
+            BoxLayout:
+                orientation: 'vertical'
+                size_hint_y: None  
+                spacing:dp(20)
+                height: self.minimum_height
+                MDLabel:
+                    text: '\nBasic Card'
+                    bold: True
+                    font_size: '25dp'
+                
+                MDGridLayout:
+                    cols: 2
+                    padding: dp(20)
+                    spacing: dp(20)
+                    adaptive_height: True
+                
+                    ElementCard:
+                        image: "/storage/emulated/0/Monster _ New Card/Assests/Pokemon card/Volter.png"
+                        name: 'Volter'
+                        sip_x: 130
+                        sip_y: 90
+                    ElementCard:
+                        image: "/storage/emulated/0/Monster _ New Card/Assests/Pokemon card/Vitti.png"
+                        name: 'Vitti'
+                        sip_x: 130
+                        sip_y: 90
+                    ElementCard:
+                        image: "/storage/emulated/0/Monster _ New Card/Assests/Pokemon card/Silpander.png"
+                        name: 'Silpander'
+                        sip_x: 130
+                        sip_y: 90
+                    ElementCard:
+                        image: "/storage/emulated/0/Monster _ New Card/Assests/Pokemon card/Durny.png"
+                        name: 'Durny'
+                        sip_x: 130
+                        sip_y: 90
+                    ElementCard:
+                        image: "/storage/emulated/0/Monster _ New Card/Assests/Pokemon card/Rianchi.png"
+                        name: 'Rianchi'
+                        sip_x: 130
+                        sip_y: 90
+                    ElementCard:
+                        image: "/storage/emulated/0/Monster _ New Card/Assests/Pokemon card/Omit.png"
+                        name: 'Omit'
+                        sip_x: 130
+                        sip_y: 90
+                    ElementCard:
+                        image: "/storage/emulated/0/Monster _ New Card/Assests/Pokemon card/Flystuck.png"
+                        name: 'Flystuck'
+                        sip_x: 130
+                        sip_y: 90
+                    ElementCard:
+                        image: "/storage/emulated/0/Monster _ New Card/Assests/Pokemon card/Monkar.png"
+                        name: 'Monkar'
+                        sip_x: 130
+                        sip_y: 90
+                    ElementCard:
+                        image: "/storage/emulated/0/Monster _ New Card/Assests/Pokemon card/Enic.png"
+                        name: 'Enic'
+                        sip_x: 130
+                        sip_y: 90
+                    ElementCard:
+                        image: "/storage/emulated/0/Monster _ New Card/Assests/Pokemon card/Jueter.png"
+                        name: 'Jueter'
+                        sip_x: 130
+                        sip_y: 90
+                
+                MDLabel:
+                    text: '2 Evolution'
+                    bold: True
+                    font_size: '25dp'
+                
+                MDGridLayout:
+                    cols: 2
+                    padding: dp(20)
+                    spacing: dp(20)
+                    adaptive_height: True
+                
+                    ElementCard:
+                        image: "/storage/emulated/0/Monster _ New Card/Assests/Pokemon card/Voltron.png"
+                        name: 'Voltron'
+                        sip_x: 130
+                        sip_y: 90
+                    ElementCard:
+                        image: "/storage/emulated/0/Monster _ New Card/Assests/Pokemon card/Brutesaur.png"
+                        name: 'Brutesaur'
+                        sip_x: 130
+                        sip_y: 90
+                    ElementCard:
+                        image: "/storage/emulated/0/Monster _ New Card/Assests/Pokemon card/Ustomenger.png"
+                        name: 'Ustomenger'
+                        sip_x: 130
+                        sip_y: 90
+                    ElementCard:
+                        image: "/storage/emulated/0/Monster _ New Card/Assests/Pokemon card/Deadmine.png"
+                        name: 'Deadmine'
+                        sip_x: 130
+                        sip_y: 90
+                    ElementCard:
+                        image: "/storage/emulated/0/Monster _ New Card/Assests/Pokemon card/Recomer.png"
+                        name: 'Recomer'
+                        sip_x: 130
+                        sip_y: 90
+                    ElementCard:
+                        image: "/storage/emulated/0/Monster _ New Card/Assests/Pokemon card/Rhidon.png"
+                        name: 'Rhidon'
+                        sip_x: 130
+                        sip_y: 90
+                    ElementCard:
+                        image: "/storage/emulated/0/Monster _ New Card/Assests/Pokemon card/Airone.png"
+                        name: 'Airone'
+                        sip_x: 130
+                        sip_y: 90
+                    ElementCard:
+                        image: "/storage/emulated/0/Monster _ New Card/Assests/Pokemon card/Connie.png"
+                        name: 'Connie'
+                        sip_x: 130
+                        sip_y: 90
+                    ElementCard:
+                        image: "/storage/emulated/0/Monster _ New Card/Assests/Pokemon card/Eniger.png"
+                        name: 'Eniger'
+                        sip_x: 130
+                        sip_y: 90
+                    ElementCard:
+                        image: "/storage/emulated/0/Monster _ New Card/Assests/Pokemon card/Spiker.png"
+                        name: 'Spiker'
+                        sip_x: 130
+                        sip_y: 90
+    
+                
+                MDLabel:
+                    text: '3 Evolution'
+                    bold: True
+                    font_size: '25dp'
+                
+                MDGridLayout:
+                    cols: 2
+                    padding: dp(20)
+                    spacing: dp(20)
+                    adaptive_height: True
+                
+                    ElementCard:
+                        image: "/storage/emulated/0/Monster _ New Card/Assests/Pokemon card/Blaster.png"
+                        name: 'Blaster'
+                        sip_x: 130
+                        sip_y: 90
+                    ElementCard:
+                        image: "/storage/emulated/0/Monster _ New Card/Assests/Pokemon card/Ridamon.png"
+                        name: 'Ridamon'
+                        sip_x: 130
+                        sip_y: 90
+                    ElementCard:
+                        image: "/storage/emulated/0/Monster _ New Card/Assests/Pokemon card/Dronestar.png"
+                        name: 'Dronestar'
+                        sip_x: 130
+                        sip_y: 90
+                    ElementCard:
+                        image: "/storage/emulated/0/Monster _ New Card/Assests/Pokemon card/Endiron.png"
+                        name: 'Endiron'
+                        sip_x: 130
+                        sip_y: 90
+                    ElementCard:
+                        image: "/storage/emulated/0/Monster _ New Card/Assests/Pokemon card/Jushteron.png"
+                        name: 'Jushteron'
+                        sip_x: 130
+                        sip_y: 90
+                
+                MDLabel:
+                    text: 'M-Evolve Cards'
+                    bold: True
+                    font_size: '25dp'
+                
+                MDGridLayout:
+                    cols: 2
+                    padding: dp(20)
+                    spacing: dp(20)
+                    adaptive_height: True
+                
+                    ElementCard:
+                        image: "/storage/emulated/0/Monster _ New Card/Assests/Pokemon card/MegaEndiron.png"
+                        name: 'MegaEndiron'
+                        font: '15sp'
+                        sip_x: 130
+                        sip_y: 90
+                    ElementCard:
+                        image: "/storage/emulated/0/Monster _ New Card/Assests/Pokemon card/MegaRidamon.png"
+                        name: 'MegaRidamon'
+                        font: '15sp'
+                        sip_x: 130
+                        sip_y: 90
+                    ElementCard:
+                        image: "/storage/emulated/0/Monster _ New Card/Assests/Pokemon card/MegaRecomer.png"
+                        name: 'MegaRecomer'
+                        font: '15sp'
+                        sip_x: 130
+                        sip_y: 90
+                    ElementCard:
+                        image: "/storage/emulated/0/Monster _ New Card/Assests/Pokemon card/MegaDronestar.png"
+                        name: 'MegaDronestar'
+                        sip_x: 130
+                        font: '15sp'
+                        sip_y: 90
+                    ElementCard:
+                        image: "/storage/emulated/0/Monster _ New Card/Assests/Pokemon card/MegaJushteron.png"
+                        name: 'MegaJushteron'
+                        sip_x: 130
+                        font: '15sp'
+                        sip_y: 90
+                
+                MDLabel:
+                    text: 'Gmax Cards'
+                    bold: True
+                    font_size: '25dp'
+                
+                MDGridLayout:
+                    cols: 2
+                    padding: dp(20)
+                    spacing: dp(20)
+                    adaptive_height: True
+                
+                    ElementCard:
+                        image: "/storage/emulated/0/Monster _ New Card/Assests/Pokemon card/GmaxVoltron.png"
+                        name: 'GmaxVoltron'
+                        font: '15sp'
+                        sip_x: 130
+                        sip_y: 90
+                    ElementCard:
+                        image: "/storage/emulated/0/Monster _ New Card/Assests/Pokemon card/GmaxUstomenger.png"
+                        name: 'GmaxUstomenger'
+                        font: '15sp'
+                        sip_x: 130
+                        sip_y: 90
+                    ElementCard:
+                        image: "/storage/emulated/0/Monster _ New Card/Assests/Pokemon card/GmaxBrutesaur.png"
+                        name: 'GmaxBrutesaur'
+                        font: '15sp'
+                        sip_x: 130
+                        sip_y: 90
+                    ElementCard:
+                        image: "/storage/emulated/0/Monster _ New Card/Assests/Pokemon card/GmaxBlaster.png"
+                        name: 'GmaxBlaster'
+                        sip_x: 130
+                        font: '15sp'
+                        sip_y: 90
+                    ElementCard:
+                        image: "/storage/emulated/0/Monster _ New Card/Assests/Pokemon card/GmaxConnie.png"
+                        name: 'GmaxConnie'
+                        sip_x: 130
+                        font: '15sp'
+                        sip_y: 90
+                MDLabel:
+                    text: 'Ability Card'
+                    bold: True
+                    font_size: '25dp'
+                    
+                MDGridLayout:
+                    cols: 2
+                    padding: dp(20)
+                    spacing: dp(20)
+                    adaptive_height: True
+                    
+                    ElementCard:
+                        image: "/storage/emulated/0/Monster _ New Card/Assests/Pokemon card/Spark.png"
+                        name: 'Spark'
+                        sip_x: 130
+                        sip_y: 90
+                        t: 'other'
+                    ElementCard:
+                        image: "/storage/emulated/0/Monster _ New Card/Assests/Pokemon card/Joto.png"
+                        name: 'Joto'
+                        sip_x: 130
+                        sip_y: 90
+                        t: 'other'
+                    ElementCard:
+                        image: "/storage/emulated/0/Monster _ New Card/Assests/Pokemon card/Mary.png"
+                        name: 'Mary'
+                        sip_x: 130
+                        sip_y: 90
+                        t: 'other'
+                    ElementCard:
+                        image: "/storage/emulated/0/Monster _ New Card/Assests/Pokemon card/Adena.png"
+                        name: 'Adena'
+                        sip_x: 130
+                        sip_y: 90
+                        t: 'other'
+                    ElementCard:
+                        image: "/storage/emulated/0/Monster _ New Card/Assests/Pokemon card/Kodar.png"
+                        name: 'Kodar'
+                        sip_x: 130
+                        sip_y: 90
+                        t: 'other'
+                    ElementCard:
+                        image: "/storage/emulated/0/Monster _ New Card/Assests/Pokemon card/Maira.png"
+                        name: 'Maira'
+                        sip_x: 130
+                        sip_y: 90
+                        t: 'other'
+                MDLabel:
+                    text: 'Monitems'
+                    bold: True
+                    font_size: '25dp'
+                    
+                MDGridLayout:
+                    cols: 2
+                    padding: dp(20)
+                    spacing: dp(20)
+                    adaptive_height: True
+                    
+                    ElementCard:
+                        image: "/storage/emulated/0/Monster _ New Card/Assests/Item/Potion.png"
+                        name: 'Potion'
+                        font: '20sp'
+                        sip_x: 130
+                        sip_y: 90
+                        t: 'other'
+                    ElementCard:
+                        image: "/storage/emulated/0/Monster _ New Card/Assests/Item/Card Bag.png"
+                        name: 'Card Bag'
+                        font: '20sp'
+                        sip_x: 130
+                        sip_y: 90
+                        t: 'other'
+                    ElementCard:
+                        image: "/storage/emulated/0/Monster _ New Card/Assests/Item/Item Bag.png"
+                        name: 'Item Bag'
+                        font: '20sp'
+                        sip_x: 130
+                        sip_y: 90
+                        t: 'other'
+                    ElementCard:
+                        image: "/storage/emulated/0/Monster _ New Card/Assests/Item/Fire Energy.png"
+                        name: 'Fire Energy'
+                        sip_x: 130
+                        font: '20sp'
+                        sip_y: 90
+                        t: 'other'
+                    ElementCard:
+                        image: "/storage/emulated/0/Monster _ New Card/Assests/Item/Water Energy.png"
+                        name: 'Water Energy'
+                        sip_x: 130
+                        font: '10sp'
+                        sip_y: 90
+                        t: 'other'
+                    ElementCard:
+                        image: "/storage/emulated/0/Monster _ New Card/Assests/Item/Stone Energy.png"
+                        name: 'Stone Energy'
+                        sip_x: 130
+                        font: '10sp'
+                        sip_y: 90
+                        t: 'other'
+                    ElementCard:
+                        image: "/storage/emulated/0/Monster _ New Card/Assests/Item/Steel Energy.png"
+                        name: 'Steel Energy'
+                        sip_x: 130
+                        font: '10sp'
+                        sip_y: 90
+                        t: 'other'
+                    ElementCard:
+                        image: "/storage/emulated/0/Monster _ New Card/Assests/Item/Grass Energy.png"
+                        name: 'Grass Energy'
+                        sip_x: 130
+                        font: '10sp'
+                        sip_y: 90
+                        t: 'other'
+                    ElementCard:
+                        image: "/storage/emulated/0/Monster _ New Card/Assests/Item/Air Energy.png"
+                        name: 'Air Energy'
+                        sip_x: 130
+                        font: '10sp'
+                        sip_y: 90
+                        t: 'other'
+                    ElementCard:
+                        image: "/storage/emulated/0/Monster _ New Card/Assests/Item/Poison Energy.png"
+                        name: 'Poison Energy'
+                        sip_x: 130
+                        font: '10sp'
+                        sip_y: 90
+                        t: 'other'
+                    ElementCard:
+                        image: "/storage/emulated/0/Monster _ New Card/Assests/Item/Electric Energy.png"
+                        name: 'Electric Energy'
+                        sip_x: 130
+                        font: '10sp'
+                        sip_y: 90
+                        t: 'other'
+                    ElementCard:
+                        image: "/storage/emulated/0/Monster _ New Card/Assests/Item/Fighting Energy.png"
+                        name: 'Fighting Energy'
+                        sip_x: 130
+                        font: '10sp'
+                        sip_y: 90
+                        t: 'other'
+                    ElementCard:
+                        image: "/storage/emulated/0/Monster _ New Card/Assests/Item/Dragon Energy.png"
+                        name: 'Dragon Energy'
+                        sip_x: 130
+                        font: '10sp'
+                        sip_y: 90
+                        t: 'other'
+                
+                        
+                    #in app purchase code are saved as file 
+
+              
+<Detail>:
+    name : 'detail'
+    Screen:
+        AsyncImage:
+            source: "/storage/emulated/0/Monster _ New Card/Assests/bg.png"
+            allow_stretch: True
+            opacity : .2
+    MDIconButton:
+        icon : 'arrow-left-circle'    
+        pos_hint : {'center_x': 0.1, 'center_y': 0.95}    
+        icon_size : '40dp'
+        on_press : app.change('store')
+    GridLayout:
+        cols : 2
+        id : typer
+        pos_hint : {'center_x': 1, 'center_y': .18}           
+            
+    BoxLayout:
+        orientation : 'vertical'
+        padding : '70dp','150dp','70dp','370dp'
+        MDProgressBar:
+            id : rpshow
+            value : 100
+            max : 100
+            size_hint_x:1
+            size_hint_y : None
+            color: 0, 1, 0, .6
+    BoxLayout:
+        orientation : 'vertical'
+        padding : '70dp','140dp','70dp','200dp'
+        MDLabel:
+            id: rp
+            bold : True
+            halign: 'center'
+            valign: 'middle'
+            font_size: '20dp'
+            color: 33/255, 150/255, 243/255, 1
+    GridLayout:
+        cols : 2
+        spacing : '20dp'
+        pos_hint : {'center_x': 0.85, 'center_y': .48}
+        MDRoundFlatIconButton:
+            id : coin_label
+            icon : "/storage/emulated/0/Monster _ New Card/Assests/Scoin.png"
+            icon_size : '25dp'
+            font_size : '18sp'
+            theme_text_color: "ContrastParentBackground"     
+        MDRoundFlatIconButton:
+            id: diamond_label
+            icon : "/storage/emulated/0/Monster _ New Card/Assests/Rdiamond.png"
+            icon_size : '25dp'
+            font_size : '18sp'
+            theme_text_color: "ContrastParentBackground"
+    MDBoxLayout:
+        orientation: 'vertical'
+        pos_hint : {'center_x': 0.575, 'center_y': .63}
+        MDCard:
+            orientation: 'vertical'
+            size_hint_x: None
+            width: "350dp"
+            elevation: 0
+            size_hint_y: None
+            md_bg_color: 1, 1, 1, .5
+            height: "240dp"
+            padding: "15dp"
+            spacing: "15dp"
+            radius: [25]              
+            ScrollView: 
+                size_hint: 1, .35
+                id : pv
+                BoxLayout:
+                    id : list_layout
+                    orientation: 'vertical'
+                    size_hint_y: None  
+                    spacing:dp(35)
+                    height: self.minimum_height
+        
+    GridLayout:
+        cols : 2
+        spacing : '100dp'
+        padding: 50, 1150, 0, 0
+        MDRoundFlatIconButton:
+            id: cp
+            icon : "/storage/emulated/0/Monster _ New Card/Assests/Scoin.png"
+            icon_size: '22dp'
+            on_press : app.csub(int(app.coinrup),'detail',root.ok)
+            font_size : '18sp'
+            md_bg_color: 33/255,150/255,243/255,1
+        MDRoundFlatIconButton:
+            id:dp
+            icon : "/storage/emulated/0/Monster _ New Card/Assests/Rdiamond.png"
+            icon_size: '22dp'
+            font_size : '18sp'
+            on_press : app.dsub(int(app.diamo),'detail',root.ok)
+            md_bg_color: 33/255,150/255,243/255,1
+    Image:
+        id: image
+        source: "/storage/emulated/0/Monster _ New Card/Assests/Pokemon card/Volter.png"
+        size_hint_x: None
+        size_hint_y: None
+        width: dp(200)
+        height: dp(140)
+        pos_hint : {'center_x': 0.5, 'center_y': .8}
+    MDLabel:
+        id: name
+        text: 'Jushteron'
+        bold: True
+        halign: 'center'
+        valign: 'middle'
+        font_size: '30dp'
+        color: 33/255, 150/255, 243/255, 1
+        pos_hint : {'center_x': 0.5, 'center_y': .67}
+<ODetail>:
+    name : 'odetail'
+    Screen:
+        AsyncImage:
+            source: "/storage/emulated/0/Monster _ New Card/Assests/bg.png"
+            allow_stretch: True
+            opacity : .2
+    MDIconButton:
+        icon : 'arrow-left-circle'    
+        pos_hint : {'center_x': 0.1, 'center_y': 0.95}    
+        icon_size : '40dp'
+        on_press : app.change('card')
+    GridLayout:
+        cols : 2
+        id : typer
+        pos_hint : {'center_x': 1, 'center_y': .18}           
+            
+    BoxLayout:
+        orientation : 'vertical'
+        padding : '70dp','150dp','70dp','400dp'
+        MDProgressBar:
+            id : rpshow
+            value : 100
+            max : 100
+            size_hint_x:1
+            size_hint_y : None
+            color: 0, 1, 0, .6
+    BoxLayout:
+        orientation : 'vertical'
+        padding : '70dp','140dp','70dp','240dp'
+        MDLabel:
+            id: rp
+            text: 'RP'
+            halign: 'center'
+            valign: 'middle'
+            font_size: '20dp'
+            color: 33/255, 150/255, 243/255, 1
+    GridLayout:
+        cols : 2
+        spacing : '20dp'
+        pos_hint : {'center_x': 0.85, 'center_y': .48}
+        MDRoundFlatIconButton:
+            id : coin_label
+            icon : "/storage/emulated/0/Monster _ New Card/Assests/Scoin.png"
+            icon_size : '25dp'
+            font_size : '18sp'
+            theme_text_color: "ContrastParentBackground"     
+        MDRoundFlatIconButton:
+            id: diamond_label
+            icon : "/storage/emulated/0/Monster _ New Card/Assests/Rdiamond.png"
+            icon_size : '25dp'
+            font_size : '18sp'
+            theme_text_color: "ContrastParentBackground"
+    MDBoxLayout:
+        orientation: 'vertical'
+        pos_hint : {'center_x': 0.575, 'center_y': .55}
+        MDCard:
+            orientation: 'vertical'
+            size_hint_x: None
+            width: "350dp"
+            elevation: 0
+            size_hint_y: None
+            md_bg_color: 1, 1, 1, .5
+            height: "330dp"
+            padding: "15dp"
+            spacing: "15dp"
+            radius: [25]              
+            ScrollView: 
+                size_hint: 1, .35
+                id : pv
+                BoxLayout:
+                    id : list_layout
+                    orientation: 'vertical'
+                    size_hint_y: None  
+                    spacing:dp(35)
+                    height: self.minimum_height
+    Image:
+        id: image
+        source: "/storage/emulated/0/Monster _ New Card/Assests/Pokemon card/Volter.png"
+        size_hint_x: None
+        size_hint_y: None
+        width: dp(200)
+        height: dp(140)
+        pos_hint : {'center_x': 0.5, 'center_y': .8}
+    MDLabel:
+        id: name
+        text: 'Jushteron'
+        bold: True
+        halign: 'center'
+        valign: 'middle'
+        font_size: '30dp'
+        color: 33/255, 150/255, 243/255, 1
+        pos_hint : {'center_x': 0.5, 'center_y': .67}        
+<Otherdetail>:
+    name : 'other'
+    Screen:
+        AsyncImage:
+            source: "/storage/emulated/0/Monster _ New Card/Assests/bg.png"
+            allow_stretch: True
+            opacity : .2
+    MDIconButton:
+        icon : 'arrow-left-circle'    
+        pos_hint : {'center_x': 0.1, 'center_y': 0.95}    
+        icon_size : '40dp'
+        on_press : app.change('store')
+    GridLayout:
+        cols : 2
+        spacing : '20dp'
+        pos_hint : {'center_x': 0.85, 'center_y': .48}
+        MDRoundFlatIconButton:
+            id : coin_label
+            icon : "/storage/emulated/0/Monster _ New Card/Assests/Scoin.png"
+            icon_size : '25dp'
+            font_size : '18sp'
+            theme_text_color: "ContrastParentBackground"
+        MDRoundFlatIconButton:
+            id: diamond_label
+            icon : "/storage/emulated/0/Monster _ New Card/Assests/Rdiamond.png"
+            icon_size : '25dp'
+            font_size : '18sp'
+            theme_text_color: "ContrastParentBackground"
+
+    MDRoundFlatIconButton:
+        id: pc
+        text:'[color=ffffff][b]     1500     [/b][/color]'
+        icon : "/storage/emulated/0/Monster _ New Card/Assests/Scoin.png"
+        icon_size : '22dp'
+        on_press : app.csub(int(app.coinrup),'other',root.ok)
+        font_size : '18sp'
+        pos_hint : {'center_x': 0.2, 'center_y': .08}
+        md_bg_color: 33/255,150/255,243/255,1
+    MDRoundFlatIconButton:
+        id: pd
+        text:  '[color=ffffff][b]      300      [/b][/color]'
+        icon : "/storage/emulated/0/Monster _ New Card/Assests/Rdiamond.png"
+        icon_size : '22dp'
+        font_size : '18sp'
+        pos_hint : {'center_x': 0.8, 'center_y': .08}
+        on_press : app.dsub(int(app.diamo),'other',root.ok)
+        md_bg_color: 33/255,150/255,243/255,1
+    Image:
+        id: image
+        source: "/storage/emulated/0/Monster _ New Card/Assests/Pokemon card/Volter.png"
+        size_hint_x: None
+        size_hint_y: None
+        width: dp(200)
+        height: dp(140)
+        pos_hint : {'center_x': 0.5, 'center_y': .8}
+    MDLabel:
+        id: name
+        text: 'Jushteron'
+        bold: True
+        halign: 'center'
+        valign: 'middle'
+        font_size: '30dp'
+        color: 33/255, 150/255, 243/255, 1
+        pos_hint : {'center_x': 0.5, 'center_y': .67}
+    MDLabel:
+        id : about
+        text : 'KivyMDhttps://kivymd.readthedocs.io › latest Label - KivyMD 1.2.0.dev0 documentation'
+        bold: True
+        halign: 'center'
+        valign: 'middle'
+        font_size: '20dp'
+        color: 33/255, 150/255, 243/255, 1
+        pos_hint : {'center_x': 0.5, 'center_y': .5}
+        markup: True
+        padding_x: dp(10) 
+        
+<ItemDetail>:
+    name : 'itemdetail'
+    Screen:
+        AsyncImage:
+            source: "/storage/emulated/0/Monster _ New Card/Assests/bg.png"
+            allow_stretch: True
+            opacity : .2
+    GridLayout:
+        cols : 2
+        spacing : '20dp'
+        pos_hint : {'center_x': 0.85, 'center_y': .48}
+        MDRoundFlatIconButton:
+            id : coin_label
+            icon : "/storage/emulated/0/Monster _ New Card/Assests/Scoin.png"
+            icon_size : '25dp'
+            font_size : '18sp'
+            theme_text_color: "ContrastParentBackground"
+        MDRoundFlatIconButton:
+            id: diamond_label
+            icon : "/storage/emulated/0/Monster _ New Card/Assests/Rdiamond.png"
+            icon_size : '25dp'
+            font_size : '18sp'
+            theme_text_color: "ContrastParentBackground"
+
+    Image:
+        id: image
+        source: "/storage/emulated/0/Monster _ New Card/Assests/Pokemon card/Volter.png"
+        size_hint_x: None
+        size_hint_y: None
+        width: dp(200)
+        height: dp(140)
+        pos_hint : {'center_x': 0.5, 'center_y': .8}
+    MDLabel:
+        id: name
+        text: 'Jushteron'
+        bold: True
+        halign: 'center'
+        valign: 'middle'
+        font_size: '30dp'
+        color: 33/255, 150/255, 243/255, 1
+        pos_hint : {'center_x': 0.5, 'center_y': .67}
+    MDLabel:
+        id : about
+        text : 'KivyMDhttps://kivymd.readthedocs.io › latest Label - KivyMD 1.2.0.dev0 documentation'
+        bold: True
+        halign: 'center'
+        valign: 'middle'
+        font_size: '20dp'
+        color: 33/255, 150/255, 243/255, 1
+        pos_hint : {'center_x': 0.5, 'center_y': .5}
+        markup: True
+        padding_x: dp(10) 

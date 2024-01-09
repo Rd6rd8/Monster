@@ -1,0 +1,70 @@
+[INFO   ] Logger: Record log in /storage/emulated/0/Monster _ New Card/Code/.kivy/logs/kivy_23-12-31_4.txt
+[INFO   ] Kivy: v2.2.1
+[INFO   ] Kivy: Installed at "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.11/site-packages/kivy/__init__.py"
+[INFO   ] Python: v3.11.4 (main, Sep 30 2023, 10:54:38) [GCC 11.4.0]
+[INFO   ] Python: Interpreter at "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/bin/python3"
+[INFO   ] Logger: Purge log fired. Processing...
+[INFO   ] Logger: Purge finished!
+[INFO   ] Factory: 190 symbols loaded
+[INFO   ] Image: Providers: img_tex, img_dds, img_sdl2, img_pil (img_ffpyplayer ignored)
+[INFO   ] KivyMD: 1.1.1, git-Unknown, 2023-12-27 (installed at "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.11/site-packages/kivymd/__init__.py")
+[INFO   ] Text: Provider: sdl2
+[INFO   ] Window: Provider: sdl2
+[INFO   ] GL: Using the "OpenGL ES 2" graphics system
+[INFO   ] GL: Backend used <sdl2>
+[INFO   ] GL: OpenGL version <b'OpenGL ES 3.2 v1.r19p0-01rel0.###other-sha0123456789ABCDEF0###'>
+[INFO   ] GL: OpenGL vendor <b'ARM'>
+[INFO   ] GL: OpenGL renderer <b'Mali-G71'>
+[INFO   ] GL: OpenGL parsed version: 3, 2
+[INFO   ] GL: Texture max size <8192>
+[INFO   ] GL: Texture max units <16>
+[INFO   ] Window: auto add sdl2 input provider
+[INFO   ] Window: virtual keyboard not allowed, single mode, not docked
+[INFO   ] GL: NPOT texture support is available
+[WARNING] Deprecated property "<BooleanProperty name=allow_stretch>" of object "<kivy.uix.image.Image object at 0x7dbf363540>" has been set, it will be removed in a future version
+[WARNING] Deprecated property "<BooleanProperty name=keep_ratio>" of object "<kivy.uix.image.Image object at 0x7dbf363540>" was accessed, it will be removed in a future version
+[WARNING] Base: Unknown <android> provider
+[INFO   ] Base: Start application main loop
+[INFO   ] Loader: using a thread pool of 2 workers
+[WARNING] Deprecated property "<NumericProperty name=padding_x>" of object "<kivymd.uix.label.label.MDLabel object at 0x7e40ecbcb0>" was accessed, it will be removed in a future version
+[INFO   ] Base: Leaving application in progress...
+[WARNING] stderr: Traceback (most recent call last):
+[WARNING] stderr:   File "/storage/emulated/0/Monster _ New Card/Code/main.py", line 1144, in <module>
+[WARNING] stderr:     MonsterApp().run()
+[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.11/site-packages/kivy/app.py", line 956, in run
+[WARNING] stderr:     runTouchApp()
+[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.11/site-packages/kivy/base.py", line 574, in runTouchApp
+[WARNING] stderr:     EventLoop.mainloop()
+[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.11/site-packages/kivy/base.py", line 339, in mainloop
+[WARNING] stderr:     self.idle()
+[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.11/site-packages/kivy/base.py", line 379, in idle
+[WARNING] stderr:     Clock.tick()
+[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.11/site-packages/kivy/clock.py", line 733, in tick
+[WARNING] stderr:     self.post_idle(ts, self.idle())
+[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.11/site-packages/kivy/clock.py", line 776, in post_idle
+[WARNING] stderr:     self._process_events()
+[WARNING] stderr:   File "kivy/_clock.pyx", line 620, in kivy._clock.CyClockBase._process_events
+[WARNING] stderr:   File "kivy/_clock.pyx", line 653, in kivy._clock.CyClockBase._process_events
+[WARNING] stderr:   File "kivy/_clock.pyx", line 649, in kivy._clock.CyClockBase._process_events
+[WARNING] stderr:   File "kivy/_clock.pyx", line 218, in kivy._clock.ClockEvent.tick
+[WARNING] stderr:   File "/storage/emulated/0/Monster _ New Card/Code/main.py", line 864, in update_progress
+[WARNING] stderr:     app.change('store')
+[WARNING] stderr:   File "/storage/emulated/0/Monster _ New Card/Code/main.py", line 648, in change
+[WARNING] stderr:     self.strng.current = screen
+[WARNING] stderr:     ^^^^^^^^^^^^^^^^^^
+[WARNING] stderr:   File "kivy/properties.pyx", line 520, in kivy.properties.Property.__set__
+[WARNING] stderr:   File "kivy/properties.pyx", line 567, in kivy.properties.Property.set
+[WARNING] stderr:   File "kivy/properties.pyx", line 606, in kivy.properties.Property._dispatch
+[WARNING] stderr:   File "kivy/_event.pyx", line 1307, in kivy._event.EventObservers.dispatch
+[WARNING] stderr:   File "kivy/_event.pyx", line 1213, in kivy._event.EventObservers._dispatch
+[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.11/site-packages/kivy/uix/screenmanager.py", line 1063, in on_current
+[WARNING] stderr:     self.transition.start(self)
+[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.11/site-packages/kivy/uix/screenmanager.py", line 377, in start
+[WARNING] stderr:     self.screen_in.dispatch('on_pre_enter')
+[WARNING] stderr:   File "kivy/_event.pyx", line 731, in kivy._event.EventDispatcher.dispatch
+[WARNING] stderr:   File "/storage/emulated/0/Monster _ New Card/Code/main.py", line 1088, in on_pre_enter
+[WARNING] stderr:     coin(self,'store')
+[WARNING] stderr:   File "/storage/emulated/0/Monster _ New Card/Code/main.py", line 51, in coin
+[WARNING] stderr:     with open(custom, 'r') as file:
+[WARNING] stderr:          ^^^^^^^^^^^^^^^^^
+[WARNING] stderr: FileNotFoundError: [Errno 2] No such file or directory: '/storage/emulated/0/.Monster : NewCard/Game Data/Monstercarddata.rd6p'
